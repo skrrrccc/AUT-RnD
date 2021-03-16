@@ -1,6 +1,4 @@
-# Ant Design Pro
-
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+# AUT R&D Project
 
 ## Environment Prepare
 
@@ -13,7 +11,7 @@ npm install
 or
 
 ```bash
-yarn
+yarn install
 ```
 
 ## Provided Scripts
@@ -26,6 +24,8 @@ Scripts provided in `package.json`. It's safe to modify or add additional script
 
 ```bash
 npm start
+yarn start
+yarn dev
 ```
 
 ### Build project
