@@ -3,28 +3,45 @@
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
-    component: './Welcome',
+    component: './Welcome'
   },
   {
-    path: '/admin',
-    name: 'admin',
+    path: '/inner-ear',
+    name: 'inner-ear',
     icon: 'crown',
     access: 'canAdmin',
-    component: './Admin',
     routes: [
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
+        path: '/inner-ear/sheep',
+        name: 'sheep',
         icon: 'smile',
-        component: './Welcome',
+        component: './InnerEar/Sheep'
       },
+      {
+        path: '/inner-ear/human',
+        name: 'human',
+        icon: 'smile',
+        component: './InnerEar/Human'
+      },
+      {
+        path: '/inner-ear/mice',
+        name: 'mice',
+        icon: 'smile',
+        component: './InnerEar/Mice'
+      }
     ],
   },
   {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
+    path: '/about-us',
+    name: 'about-us',
+    icon: 'bank',
+    component: './AboutUs'
+  },
+  {
+    path: '/contact-us',
+    name: 'contact-us',
+    icon: 'comment',
+    component: './ContactUs'
   },
   {
     path: '/',
