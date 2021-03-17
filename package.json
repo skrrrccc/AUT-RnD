@@ -63,12 +63,9 @@
     "react-dev-inspector": "^1.1.1",
     "react-dom": "^17.0.0",
     "react-helmet-async": "^1.0.4",
-    "react-stl-file-viewer": "^0.0.5",
-    "react-three-fiber": "^5.3.19",
     "stl-viewer": "^0.12.0",
     "styled-components": "^5.2.1",
     "three": "^0.126.1",
-    "three-stl-loader": "^1.0.6",
     "umi": "^3.4.0",
     "umi-request": "^1.0.8"
   },
