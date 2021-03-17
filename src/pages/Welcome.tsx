@@ -1,71 +1,57 @@
 import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Alert, Typography } from 'antd';
-import { useIntl, FormattedMessage } from 'umi';
+import { Col, Row, Card } from 'antd';
+import { useIntl, FormattedMessage, history } from 'umi';
 import * as THREE from 'three'
 import styles from './Welcome.less';
-import STLViewer from 'stl-viewer'
-
-const STLLoader = require("three-stl-loader")(THREE);
-
-const CodePreview: React.FC = ({ children }) => (
-  <pre className={styles.pre}>
-    <code>
-      <Typography.Text copyable>{children}</Typography.Text>
-    </code>
-  </pre>
-);
-
+import STLViewer from 'stl-viewer';
+import { Header } from 'antd/lib/layout/layout';
+import Title from 'antd/lib/skeleton/Title';
 export default (): React.ReactNode => {
   const intl = useIntl();
-  // const scene = new THREE.Scene();
-  // const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
-  // const renderer = new THREE.WebGLRenderer();
-  // let loader = new STLLoader();
-  // loader.load("./../../public/cochleahorizontal.stl", (geometry) => {
-
-  //   const material = new THREE.MeshPhongMaterial({ color: 'skyblue' });
-
-  //   const mesh = new THREE.Mesh(geometry, material);
-  //   console.log(mesh);
-
-  //   scene.add(mesh);
-
-  // });
-  // camera.position.z = 5;
-
-  // const animate =  () => {
-  //   requestAnimationFrame(animate);
-  //   renderer.render(scene, camera);
-  // };
-
-  // animate();
-  // renderer.setSize(window.innerWidth, window.innerHeight);
-
+  const { Meta } = Card;
   return (
     <PageContainer>
-      <Card>
-        <Alert
-          message={intl.formatMessage({
-            id: 'pages.welcome.alertMessage',
-            defaultMessage: 'Welcome to Sheep Page',
-          })}
-          type="success"
-          showIcon
-          banner
-          style={{
-            margin: -12,
-            marginBottom: 24,
-          }}
-        />
-      </Card>
-      <STLViewer
-        model='/public/cochleahorizontal.stl'
-        width={800}
-        modelColor='unset'
-        backgroundColor='#EAEAEA'
-        rotate={false}
-      />
+      <Title>Virtual Inner Ear Map </Title>
+      <Row>
+        <Col span={8}>
+          <Card
+            hoverable
+            onClick={() => {
+              history.push('/inner-ear/mice' || '/');
+            }}
+            style={{ height: 480 }}
+            cover={
+            <img 
+                alt="mice" src="https://www.researchgate.net/profile/Selina-Pearson/publication/221845473/figure/fig5/AS:305475305394180@1449842396459/Cleared-Inner-Ears-from-Control-and-Tc1-mice-Gross-morphology-of-the-inner-ears-of-a.png" />}
+          >
+            <Meta title="Mice"/>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            hoverable
+            onClick={() => {
+              history.push('/inner-ear/sheep' || '/');
+            }}
+            style={{ height: 480 }}
+            cover={<img alt="sheep" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00359-020-01430-w/MediaObjects/359_2020_1430_Fig1_HTML.png" />}
+          >
+            <Meta title="Sheep" />
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            hoverable 
+            onClick={() => {
+              history.push('/inner-ear/human' || '/');
+            }}
+            style={{ height: 480 }}
+            cover={<img alt="human" src="https://slocountyhearingaids.com/wp-content/uploads/2017/01/Inner-Ear-1.jpg"/>}
+        >
+          <Meta title="Human"/>
+        </Card></Col>
+      </Row>
     </PageContainer>
   );
 };
