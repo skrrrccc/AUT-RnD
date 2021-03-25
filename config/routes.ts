@@ -6,28 +6,80 @@
     component: './Welcome'
   },
   {
-    path: '/inner-ear',
-    name: 'inner-ear',
+    path: '/sheep',
+    name: 'sheep',
     icon: 'crown',
     access: 'canAdmin',
     routes: [
       {
-        path: '/inner-ear/sheep',
-        name: 'sheep',
+        path: '/sheep/main',
+        name: 'main',
         icon: 'smile',
-        component: './InnerEar/Sheep'
+        component: './sheep/MainContent'
       },
       {
-        path: '/inner-ear/human',
-        name: 'human',
+        path: '/sheep/sheep3D',
+        name: 'sheep3D',
         icon: 'smile',
-        component: './InnerEar/Human'
+        component: './sheep/Sheep3D'
       },
       {
-        path: '/inner-ear/mice',
-        name: 'mice',
+        path: '/sheep/inner-ear-slice',
+        name: 'inner-ear-slice',
         icon: 'smile',
-        component: './InnerEar/Mice'
+        component: './sheep/InnerEarSlice'
+      }
+    ],
+  },
+  {
+    path: '/human',
+    name: 'human',
+    icon: 'crown',
+    access: 'canAdmin',
+    routes: [
+      {
+        path: '/human/main',
+        name: 'main',
+        icon: 'smile',
+        component: './human/MainContent'
+      },
+      {
+        path: '/human/human3D',
+        name: 'human3D',
+        icon: 'smile',
+        component: './human/Human3D'
+      },
+      {
+        path: '/human/inner-ear-slice',
+        name: 'inner-ear-slice',
+        icon: 'smile',
+        component: './sheep/InnerEarSlice'
+      }
+    ],
+  },
+  {
+    path: '/mice',
+    name: 'mice',
+    icon: 'crown',
+    access: 'canAdmin',
+    routes: [
+      {
+        path: '/mice/main',
+        name: 'main',
+        icon: 'smile',
+        component: './mice/MainContent'
+      },
+      {
+        path: '/mice/mice3D',
+        name: 'mice3D',
+        icon: 'smile',
+        component: './mice/Mice3D'
+      },
+      {
+        path: '/mice/inner-ear-slice',
+        name: 'inner-ear-slice',
+        icon: 'smile',
+        component: './mice/InnerEarSlice'
       }
     ],
   },
