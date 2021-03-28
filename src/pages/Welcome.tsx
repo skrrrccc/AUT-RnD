@@ -18,7 +18,7 @@ export default (): React.ReactNode => {
           <Card
             hoverable
             onClick={() => {
-              history.push('/inner-ear/mice' || '/');
+              history.push('/mice/main' || '/');
             }}
             style={{ height: 480 }}
             cover={
@@ -32,7 +32,7 @@ export default (): React.ReactNode => {
           <Card
             hoverable
             onClick={() => {
-              history.push('/inner-ear/sheep' || '/');
+              history.push('/sheep/main' || '/');
             }}
             style={{ height: 480 }}
             cover={<img alt="sheep" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00359-020-01430-w/MediaObjects/359_2020_1430_Fig1_HTML.png" />}
@@ -44,7 +44,7 @@ export default (): React.ReactNode => {
           <Card
             hoverable 
             onClick={() => {
-              history.push('/inner-ear/human' || '/');
+              history.push('/human/main' || '/');
             }}
             style={{ height: 480 }}
             cover={<img alt="human" src="https://slocountyhearingaids.com/wp-content/uploads/2017/01/Inner-Ear-1.jpg"/>}

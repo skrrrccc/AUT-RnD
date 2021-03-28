@@ -10,7 +10,7 @@ export default (): React.ReactNode => {
         <PageContainer>
             <Card>
                 <Alert
-                    message="comming soon"
+                    message="coming soon"
                     type="warning"
                     showIcon
                     banner

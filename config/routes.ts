@@ -53,7 +53,7 @@
         path: '/human/inner-ear-slice',
         name: 'inner-ear-slice',
         icon: 'smile',
-        component: './sheep/InnerEarSlice'
+        component: './human/InnerEarSlice'
       }
     ],
   },

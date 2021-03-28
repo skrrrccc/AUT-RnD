@@ -10,7 +10,18 @@ export default (): React.ReactNode => {
     const intl = useIntl();
     return (
         <PageContainer>
-            <p>Inner Ear Slice</p>
+            <Card>
+                <Alert
+                    message="coming soon"
+                    type="warning"
+                    showIcon
+                    banner
+                    style={{
+                        margin: -12,
+                        marginBottom: 24,
+                    }}
+                />
+            </Card>
         </PageContainer>
     );
 };
